@@ -10,6 +10,9 @@ import Dashboard from "./pages/Dashboard";
 import RiskCenterPage from "./pages/RiskCenterPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import AIInsightsPage from "./pages/AIInsightsPage";
+import AnalyticsPage from "./pages/AnalyticsPage";
+import GeoIntelligencePage from "./pages/GeoIntelligencePage";
+import CompliancePage from "./pages/CompliancePage";
 
 function PlaceholderPage({
   title,
@@ -67,35 +70,21 @@ function App() {
           element={<AIInsightsPage />}
         />
 
-        <Route
-          path="/analytics"
-          element={
-            <PlaceholderPage
-              title="Analytics"
-              subtitle="Fund utilization, expenditure and project analytics."
-            />
-          }
-        />
+       <Route
+  path="/analytics"
+  element={<AnalyticsPage />}
+/>
 
-        <Route
-          path="/geo"
-          element={
-            <PlaceholderPage
-              title="Geo Intelligence"
-              subtitle="Geospatial monitoring of MPLADS works and regional patterns."
-            />
-          }
-        />
+       <Route
+  path="/geo"
+  element={<GeoIntelligencePage />}
+/>
 
-        <Route
-          path="/compliance"
-          element={
-            <PlaceholderPage
-              title="Compliance"
-              subtitle="Audit, guideline and compliance monitoring."
-            />
-          }
-        />
+
+<Route
+  path="/compliance"
+  element={<CompliancePage />}
+/>
 
         <Route
           path="/settings"
