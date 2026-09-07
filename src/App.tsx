@@ -8,6 +8,8 @@ import AppLayout from "./components/layout/AppLayout";
 
 import Dashboard from "./pages/Dashboard";
 import RiskCenterPage from "./pages/RiskCenterPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import AIInsightsPage from "./pages/AIInsightsPage";
 
 function PlaceholderPage({
   title,
@@ -45,55 +47,25 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* =================================================
-            OVERVIEW
-        ================================================== */}
-
         <Route
           path="/"
           element={<Dashboard />}
         />
 
-        {/* =================================================
-            PROJECTS
-        ================================================== */}
-
         <Route
           path="/projects"
-          element={
-            <PlaceholderPage
-              title="Projects"
-              subtitle="MPLADS project monitoring and work-level intelligence."
-            />
-          }
+          element={<ProjectsPage />}
         />
-
-        {/* =================================================
-            RISK CENTER
-        ================================================== */}
 
         <Route
           path="/risk"
           element={<RiskCenterPage />}
         />
 
-        {/* =================================================
-            AI INSIGHTS
-        ================================================== */}
-
         <Route
           path="/ai-insights"
-          element={
-            <PlaceholderPage
-              title="AI Insights"
-              subtitle="AI-generated trends, anomalies and decision support."
-            />
-          }
+          element={<AIInsightsPage />}
         />
-
-        {/* =================================================
-            ANALYTICS
-        ================================================== */}
 
         <Route
           path="/analytics"
@@ -105,10 +77,6 @@ function App() {
           }
         />
 
-        {/* =================================================
-            GEO INTELLIGENCE
-        ================================================== */}
-
         <Route
           path="/geo"
           element={
@@ -119,10 +87,6 @@ function App() {
           }
         />
 
-        {/* =================================================
-            COMPLIANCE
-        ================================================== */}
-
         <Route
           path="/compliance"
           element={
@@ -132,10 +96,6 @@ function App() {
             />
           }
         />
-
-        {/* =================================================
-            SETTINGS
-        ================================================== */}
 
         <Route
           path="/settings"
